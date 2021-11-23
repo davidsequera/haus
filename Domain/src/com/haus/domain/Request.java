@@ -1,9 +1,12 @@
 package com.haus.domain;
 
-import com.haus.domain.Rent;
-
 
 public class Request {
     private Rent rent;
     private String datosPago;
+
+    public Request(Rent rent, String datosPago) {
+        this.rent = rent;
+        this.datosPago = datosPago;
+    }
 }

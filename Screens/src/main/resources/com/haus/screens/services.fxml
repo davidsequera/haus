@@ -13,7 +13,7 @@
       <AnchorPane prefHeight="400.0" prefWidth="118.0" styleClass="menu" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Button fx:id="home" layoutX="20.0" layoutY="222.0" mnemonicParsing="false" onAction="#goHome" prefHeight="77.0" prefWidth="78.0" styleClass="menuButton" text="🏠" textFill="WHITE" AnchorPane.topAnchor="192.0" />
-            <Button layoutX="20.0" layoutY="300.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="78.0" styleClass="menuButton" text="👤" textFill="WHITE" AnchorPane.bottomAnchor="192.0" />
+            <Button fx:id="account" layoutX="20.0" layoutY="300.0" mnemonicParsing="false" onAction="#goAccount" prefHeight="77.0" prefWidth="78.0" styleClass="menuButton" text="👤" textFill="WHITE" AnchorPane.bottomAnchor="192.0" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="118.0" prefHeight="600.0" prefWidth="781.0" styleClass="box" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="118.0" AnchorPane.rightAnchor="0.39999999999997726" AnchorPane.topAnchor="0.0">
@@ -67,7 +67,7 @@
                   <Label layoutX="186.0" layoutY="39.0" styleClass="basicBox-title" text="Casa Roja" />
                   <Label layoutX="186.0" layoutY="75.0" text="Madrid" />
                   <Label layoutX="467.0" layoutY="39.0" text="Precio Base: 100" />
-                  <Button fx:id="btnPagar" layoutX="488.0" layoutY="80.0" mnemonicParsing="false" onAction="#goHome" text="Ir a pagar" />
+                  <Button fx:id="btnPagar" layoutX="488.0" layoutY="80.0" mnemonicParsing="false" onAction="#goRent" text="Ir a pagar" />
                </children>
             </AnchorPane>
             <Label layoutX="14.0" layoutY="249.0" styleClass="title" text="Servicios" />

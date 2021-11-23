@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ListController {
+public class ListController extends pageController {
 
     @FXML
     private Button bt1;

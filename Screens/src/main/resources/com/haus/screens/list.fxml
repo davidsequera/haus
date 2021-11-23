@@ -12,7 +12,7 @@
     <AnchorPane prefHeight="400.0" prefWidth="118.0" styleClass="menu" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
       <children>
         <Button layoutX="20.0" layoutY="222.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="78.0" styleClass="menuButton" text="🏠" textFill="WHITE" AnchorPane.topAnchor="192.0" />
-        <Button layoutX="20.0" layoutY="300.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="78.0" styleClass="menuButton" text="👤" textFill="WHITE" AnchorPane.bottomAnchor="192.0" />
+        <Button fx:id="account" layoutX="20.0" layoutY="300.0" mnemonicParsing="false" onAction="#goAccount" prefHeight="77.0" prefWidth="78.0" styleClass="menuButton" text="👤" textFill="WHITE" AnchorPane.bottomAnchor="192.0" />
       </children>
     </AnchorPane>
     <AnchorPane layoutX="118.0" prefHeight="600.0" prefWidth="781.0" styleClass="box" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="118.0" AnchorPane.rightAnchor="0.39999999999997726" AnchorPane.topAnchor="0.0">

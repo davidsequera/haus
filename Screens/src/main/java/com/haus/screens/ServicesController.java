@@ -10,19 +10,13 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ServicesController {
-
+public class ServicesController extends  pageController{
     @FXML
     private Button btnPagar;
-
-    @FXML
-    private Button home;
-
-    @FXML
-    void goHome(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("list.fxml"));
+    public void goRent(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("rent.fxml"));
         Parent root = loader.load();
-        ListController listController = loader.getController();
+        RentController rentController = loader.getController();
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.setScene(scene);
@@ -34,8 +28,9 @@ public class ServicesController {
 //                ex.printStackTrace();
 //            }
 //        });
-        Stage myStage = (Stage) this.home.getScene().getWindow();
+        Stage myStage = (Stage) this.btnPagar.getScene().getWindow();
         myStage.close();
     }
+
 
 }
