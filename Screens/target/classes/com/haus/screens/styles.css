@@ -1,12 +1,24 @@
 .menu{
     -fx-background-color: #3B0273;
-    -fx-color: #FFFF;
+    -fx-text-fill: #FFFF;
+}
+.logIn{
+    -fx-background-color: #3B0273;
 }
 .menuButton{
     -fx-font-size: 32;
     -fx-background-color: transparent;
     -fx-background-radius: 100;
     -fx-border-radius: 100;
+}
+.register{
+    -fx-font-size: 15;
+    -fx-background-color: transparent;
+    -fx-background-radius: 100;
+    -fx-border-radius: 100;
+}
+.register:hover{
+    -fx-text-fill: #DFB3F2;
 }
 .menuButton:hover{
     -fx-background-color: #9530D9;
