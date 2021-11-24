@@ -20,7 +20,7 @@
                         <TextField layoutX="129.0" layoutY="98.0" />
                         <Label layoutX="123.0" layoutY="42.0" styleClass="title" text="Nombre" textFill="#848383" />
                         <Label layoutX="123.0" layoutY="146.0" styleClass="title" text="Usuario" textFill="#848383" />
-                        <TextField layoutX="132.0" layoutY="301.0" />
+                        <TextField accessibleRole="PASSWORD_FIELD" layoutX="132.0" layoutY="301.0" />
                         <Label layoutX="126.0" layoutY="245.0" styleClass="title" text="Contraseña" textFill="#848383" />
                         <Button fx:id="toRegister" layoutX="209.0" layoutY="428.0" mnemonicParsing="false" onAction="#LogIn" styleClass="register" text="Inicia Sesion" />
               </children>

@@ -10,8 +10,6 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="malo" target="11" />
-      <module name="screens" target="11" />
       <module name="Screens" target="11" />
     </bytecodeTargetLevel>
   </component>
