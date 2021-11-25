@@ -2,8 +2,8 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
 
@@ -22,58 +22,18 @@
             <Label styleClass="title" text="Propiedades" />
           </children>
         </FlowPane>
-        <FlowPane alignment="CENTER" hgap="20.0" layoutY="74.0" prefHeight="526.0" prefWidth="782.0" vgap="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="74.0">
-          <children>
-            <AnchorPane prefHeight="178.0" prefWidth="347.0" styleClass="basicBox">
-              <children>
-                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                    <Image url="https://images.unsplash.com/photo-1517541866997-ea18e32ea9e9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=580&amp;q=80" />
-                  </image>
-                </ImageView>
-                <Label layoutX="186.0" layoutY="39.0" styleClass="basicBox-title" text="Casa Roja" />
-                <Label layoutX="186.0" layoutY="77.0" text="Madrid" />
-                <Button fx:id="bt1" layoutX="186.0" layoutY="128.0" mnemonicParsing="false" onAction="#changeServices" text="Precio: 100" />
-              </children>
+            <AnchorPane layoutY="74.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="74.0">
+               <children>
+                  <TableView layoutX="74.0" layoutY="68.0" prefHeight="390.0" prefWidth="609.0">
+                    <columns>
+                      <TableColumn prefWidth="214.39996945858002" text="Nombre" />
+                      <TableColumn prefWidth="244.80001831054688" text="Lugar" />
+                        <TableColumn minWidth="0.0" prefWidth="149.59994506835938" text="Precio" />
+                    </columns>
+                  </TableView>
+          <Button fx:id="bt1" layoutX="353.0" layoutY="476.0" mnemonicParsing="false" onAction="#changeServices" text="Ir a Pagar" />
+               </children>
             </AnchorPane>
-            <AnchorPane prefHeight="178.0" prefWidth="347.0" styleClass="basicBox">
-              <children>
-                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                    <Image url="https://images.unsplash.com/photo-1627208551133-d3f446a82636?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=582&amp;q=80" />
-                  </image>
-                </ImageView>
-                <Label layoutX="186.0" layoutY="39.0" styleClass="basicBox-title" text="La Casa Rosada" />
-                <Label layoutX="186.0" layoutY="77.0" text="Buenos Aires" />
-                <Button layoutX="186.0" layoutY="128.0" mnemonicParsing="false" text="Precio: 500" />
-              </children>
-            </AnchorPane>
-            <AnchorPane prefHeight="178.0" prefWidth="347.0" styleClass="basicBox">
-              <children>
-                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                    <Image url="https://images.unsplash.com/photo-1630698388852-b8a06a8c560c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=580&amp;q=80" />
-                  </image>
-                </ImageView>
-                <Label layoutX="186.0" layoutY="39.0" styleClass="basicBox-title" text="Rustica" />
-                <Label layoutX="186.0" layoutY="77.0" text="Chia" />
-                <Button layoutX="186.0" layoutY="128.0" mnemonicParsing="false" text="Precio: 50" />
-              </children>
-            </AnchorPane>
-            <AnchorPane centerShape="false" prefHeight="178.0" prefWidth="347.0" scaleShape="false" styleClass="basicBox">
-              <children>
-                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="13.599999999999994" AnchorPane.rightAnchor="183.2" AnchorPane.topAnchor="14.0">
-                  <image>
-                    <Image url="https://images.unsplash.com/photo-1522050212171-61b01dd24579?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=580&amp;q=80" />
-                  </image>
-                </ImageView>
-                <Label layoutX="186.0" layoutY="39.0" styleClass="basicBox-title" text="Tejado" />
-                <Label layoutX="186.0" layoutY="77.0" text="San Francisco" />
-                <Button layoutX="186.0" layoutY="128.0" mnemonicParsing="false" text="Precio: 200" />
-              </children>
-            </AnchorPane>
-          </children>
-        </FlowPane>
       </children>
     </AnchorPane>
   </children>
