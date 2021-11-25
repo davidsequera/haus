@@ -25,6 +25,13 @@ abstract class pageController {
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.show();
+//        stage.setOnCloseRequest(e-> {
+//            try {
+//                servicesController.regresarMenuProfe(event);
+//            } catch (IOException ex) {
+//                ex.printStackTrace();
+//            }
+//        });
         Stage myStage = (Stage) this.home.getScene().getWindow();
         myStage.close();
     }
@@ -37,6 +44,13 @@ abstract class pageController {
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.show();
+//        stage.setOnCloseRequest(e-> {
+//            try {
+//                servicesController.regresarMenuProfe(event);
+//            } catch (IOException ex) {
+//                ex.printStackTrace();
+//            }
+//        });
         Stage myStage = (Stage) this.account.getScene().getWindow();
         myStage.close();
     }

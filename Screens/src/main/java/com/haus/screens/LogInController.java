@@ -16,13 +16,15 @@ public class LogInController extends pageController {
     @FXML
     private Button toRegister;
 
-    Iauth auth = new Auth;
+
+    IAuth auth = new Auth();
+
     @FXML
     void LogIn(ActionEvent event) throws IOException {
         String user = "isa";
         String password = "amoasebastian";
-
-        if(true) super.goHome(event);
+        if(auth.logIn(user,password)) this.goHome(event);
+        else super.goAccount(event);
     }
 
 }

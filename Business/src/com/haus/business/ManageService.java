@@ -1,6 +1,8 @@
 package com.haus.business;
 
-public class ManageService {
+import com.haus.interfaces.IMangeService;
+
+public class ManageService implements IMangeService {
     public int agregarServicio() {
         return super.hashCode();
     }
