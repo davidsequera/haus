@@ -66,7 +66,7 @@ public class Integrador {
         List<Service> list = new ArrayList<>();
         BufferedReader br;
         try {
-            br = new BufferedReader(new FileReader(ownerCSV));
+            br = new BufferedReader(new FileReader(serviceCSV));
             br.readLine();
             String cad = br.readLine();
             while (!cad.equalsIgnoreCase("#FIN")){

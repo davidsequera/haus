@@ -11,6 +11,9 @@
     -fx-background-radius: 100;
     -fx-border-radius: 100;
 }
+.logOutButton{
+    -fx-background-color: #9530D9;
+}
 .register{
     -fx-font-size: 15;
     -fx-background-color: transparent;
