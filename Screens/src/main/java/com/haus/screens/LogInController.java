@@ -1,14 +1,26 @@
 package com.haus.screens;
 
 import com.haus.business.Auth;
+import com.haus.domain.Owner;
 import com.haus.interfaces.IAuth;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class LogInController extends pageController {
+public class LogInController{
+    @FXML
+    private PasswordField TextPassword;
+
+    @FXML
+    private TextField TextUsuario;
 
     @FXML
     private Button singInButton;
@@ -20,11 +32,34 @@ public class LogInController extends pageController {
     IAuth auth = new Auth();
 
     @FXML
+    void goSignUp(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("SignUp.fxml"));
+        Parent root = loader.load();
+        SignUpController signUpController = loader.getController();
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
+        Stage myStage = (Stage) this.singInButton.getScene().getWindow();
+        myStage.close();
+    }
+    @FXML
     void LogIn(ActionEvent event) throws IOException {
-        String user = "isa";
-        String password = "amoasebastian";
-        if(auth.logIn(user,password)) this.goHome(event);
-        else super.goAccount(event);
+        if(auth.logIn(TextUsuario.getText(),TextPassword.getText())) {
+            this.goIn();
+        }
+    }
+    @FXML
+    private void goIn() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("list.fxml"));
+        Parent root = loader.load();
+        ListController listController = loader.getController();
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
+        Stage myStage = (Stage) this.singInButton.getScene().getWindow();
+        myStage.close();
     }
 
 }

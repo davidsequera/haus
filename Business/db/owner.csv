@@ -1,1 +1,5 @@
-usuario,nombre,password
+correo,password,nombre,apellido
+isa,sebas,Isabela,Blanco
+sebas,isa,Sebastian,Orjuela
+david,donas,David,Sequera
+#FIN
