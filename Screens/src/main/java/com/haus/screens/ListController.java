@@ -1,7 +1,9 @@
 package com.haus.screens;
 
 import com.haus.business.Integrador;
+import com.haus.business.ListProperties;
 import com.haus.domain.Rent;
+import com.haus.interfaces.IListProperties;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -35,12 +37,12 @@ public class ListController extends pageController implements Initializable {
     @FXML
     private TableView<Rent> PropertyList;
 
-    @FXML
-    private Button account;
 
     @FXML
     private Button btRentar;
 
+
+    IListProperties listProperties = new ListProperties();
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
@@ -51,11 +53,11 @@ public class ListController extends pageController implements Initializable {
     }
     private void LoadData() throws IOException {
         ObservableList<Rent> list = FXCollections.observableArrayList(
-                Objects.requireNonNull(Integrador.leerDeArchivoTexto())
+                Objects.requireNonNull(listProperties.listarPropiedades())
         );
-        ColumnName.setCellValueFactory(new PropertyValueFactory<Rent,String>("name"));
-        ColumnLocation.setCellValueFactory(new PropertyValueFactory<Rent, String>("location"));
-        ColumnPrice.setCellValueFactory(new PropertyValueFactory<Rent,Integer>("price"));
+        ColumnName.setCellValueFactory(new PropertyValueFactory<Rent,String>("nombre"));
+        ColumnLocation.setCellValueFactory(new PropertyValueFactory<Rent, String>("lugar"));
+        ColumnPrice.setCellValueFactory(new PropertyValueFactory<Rent,Integer>("precio"));
         PropertyList.setItems(list);
 
     }
@@ -64,23 +66,20 @@ public class ListController extends pageController implements Initializable {
 
     @FXML
     void changeServices(ActionEvent event) throws IOException {
+        Rent property =PropertyList.getSelectionModel().getSelectedItem();
+        if(property != null){
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("services.fxml"));
+            Parent root = loader.load();
+            ServicesController servicesController = loader.getController();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            servicesController.setRent(property);
+            stage.show();
+            Stage myStage = (Stage) this.btRentar.getScene().getWindow();
+            myStage.close();
+        }
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("services.fxml"));
-        Parent root = loader.load();
-        ServicesController servicesController = loader.getController();
-        Scene scene = new Scene(root);
-        Stage stage = new Stage();
-        stage.setScene(scene);
-        stage.show();
-//        stage.setOnCloseRequest(e-> {
-//            try {
-//                servicesController.goHome(event);
-//            } catch (IOException ex) {
-//                ex.printStackTrace();
-//            }
-//        });
-        Stage myStage = (Stage) this.btRentar.getScene().getWindow();
-        myStage.close();
     }
 
 

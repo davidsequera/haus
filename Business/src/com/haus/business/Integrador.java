@@ -1,22 +1,30 @@
 package com.haus.business;
 
+import com.haus.domain.Owner;
 import com.haus.domain.Rent;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import com.haus.domain.Service;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-public class Integrador {
-    public static ObservableList<Rent> leerDeArchivoTexto() throws IOException {
+import java.util.ArrayList;
+import java.util.List;
 
-        ObservableList<Rent> properties = FXCollections.observableArrayList();
-        String SEPARATOR=",";
-        BufferedReader br = null;
-        String archCSV = "E:\\codes\\haus\\Business\\db\\rent.csv";
+public class Integrador {
+    public  static String base = "D:\\source\\haus\\Business\\";
+    public  static String rentCSV = base+"db\\rent.csv";
+    public  static String ownerCSV = base+"db\\owner.csv";
+    public  static String requestCSV = base+"db\\request.csv";
+    public  static String serviceCSV = base+"db\\service.csv";
+    public  static String SEPARATOR = ",";
+
+    public static List<Rent> getProperties() throws IOException {
+
+        List<Rent> properties = new ArrayList<>();
+        BufferedReader br;
         try {
-            br = new BufferedReader(new FileReader(archCSV));
+            br = new BufferedReader(new FileReader(rentCSV));
             br.readLine();
             String cad = br.readLine();
             while (!cad.equalsIgnoreCase("#FIN")){
@@ -28,6 +36,47 @@ public class Integrador {
             }
             br.close();
             return properties;
+        } catch (FileNotFoundException e) {
+            System.out.println("El archivo de texto no ha sido encontrado" + e);
+        }
+        return null;
+    }
+    public static List<Owner> getUsers() throws IOException {
+        List<Owner> list = new ArrayList<>();
+        BufferedReader br;
+        try {
+            br = new BufferedReader(new FileReader(ownerCSV));
+            br.readLine();
+            String cad = br.readLine();
+            while (!cad.equalsIgnoreCase("#FIN")){
+                String [] fields = cad.split(SEPARATOR);
+                Owner user = new Owner(fields[0],fields[1],fields[2],fields[3]);
+                list.add(user);
+                cad = br.readLine();
+            }
+            br.close();
+            return list;
+        } catch (FileNotFoundException e) {
+            System.out.println("El archivo de texto no ha sido encontrado" + e);
+        }
+        return null;
+    }
+    public static List<Service> getServices() throws IOException {
+        List<Service> list = new ArrayList<>();
+        BufferedReader br;
+        try {
+            br = new BufferedReader(new FileReader(ownerCSV));
+            br.readLine();
+            String cad = br.readLine();
+            while (!cad.equalsIgnoreCase("#FIN")){
+                String [] fields = cad.split(SEPARATOR);
+                int precio = Integer.parseInt(fields[1]);
+                Service service = new Service(fields[0],precio);
+                list.add(service);
+                cad = br.readLine();
+            }
+            br.close();
+            return list;
         } catch (FileNotFoundException e) {
             System.out.println("El archivo de texto no ha sido encontrado" + e);
         }

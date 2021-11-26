@@ -48,9 +48,9 @@
             </FlowPane>
             <AnchorPane layoutX="62.0" layoutY="78.0" prefHeight="138.0" prefWidth="674.0" styleClass="basicBox" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="45.200000000000045">
                <children>
-                  <Label fx:id="PropertyName" layoutX="91.0" layoutY="15.0" prefHeight="48.0" prefWidth="183.0" styleClass="basicBox-title" text="Casa Roja" />
-                  <Label fx:id="PropertyLocation" layoutX="91.0" layoutY="75.0" prefHeight="36.0" prefWidth="161.0" text="Madrid" />
-                  <Label fx:id="PropertyPrice" layoutX="467.0" layoutY="39.0" text="Precio Total: 200" />
+                  <Label fx:id="PropertyName" layoutX="91.0" layoutY="15.0" prefHeight="48.0" prefWidth="183.0" styleClass="basicBox-title" text="Nombre" />
+                  <Label fx:id="PropertyLocation" layoutX="91.0" layoutY="75.0" prefHeight="36.0" prefWidth="161.0" text="Lugar" />
+                  <Label fx:id="PropertyPrice" layoutX="450.0" layoutY="39.0" text="Precio" />
                   <Button layoutX="576.0" layoutY="80.0" mnemonicParsing="false" text="Pagar" />
                   <Button layoutX="430.0" layoutY="80.0" mnemonicParsing="false" text="Servicios" />
                </children>
