@@ -14,14 +14,14 @@
                     <children>
                         <AnchorPane prefHeight="498.0" prefWidth="510.0" styleClass="basicBox">
                             <children>
-                                <Button fx:id="singUpButton" layoutX="195.0" layoutY="406.0" mnemonicParsing="false" onAction="#singUpButton" text="Registrate" />
+                                <Button fx:id="singUpButton" layoutX="195.0" layoutY="406.0" mnemonicParsing="false" onAction="#signIn" text="Registrate" />
                                 <TextField fx:id="TextApellido" layoutX="131.0" layoutY="160.0" />
                                 <TextField fx:id="TextNombre" layoutX="129.0" layoutY="78.0" />
                                 <Label layoutX="123.0" layoutY="42.0" styleClass="title" text="Nombre" textFill="#848383" />
                                 <Label layoutX="125.0" layoutY="124.0" styleClass="title" text="Apellido" textFill="#848383" />
                                 <TextField fx:id="TextEmail" layoutX="128.0" layoutY="249.0" />
                                 <Label layoutX="123.0" layoutY="213.0" styleClass="title" text="Email" textFill="#848383" />
-                                <Button fx:id="toRegister" layoutX="198.0" layoutY="456.0" mnemonicParsing="false" onAction="#goLogIn" styleClass="register" text="Inicia Sesion" />
+                                <Button fx:id="toRegister" layoutX="201.0" layoutY="456.0" mnemonicParsing="false" onAction="#goLogIn" styleClass="register" text="Inicia Sesion" />
                                 <TextField fx:id="TextPassword" layoutX="128.0" layoutY="337.0" />
                                 <Label layoutX="123.0" layoutY="301.0" styleClass="title" text="Contraseña" textFill="#848383" />
                             </children>

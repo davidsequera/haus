@@ -5,10 +5,7 @@ import com.haus.domain.Payment;
 import com.haus.domain.Rent;
 import com.haus.domain.Service;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -85,6 +82,28 @@ public class Integrador {
     }
     public static Owner saveUser(Owner usuario) throws IOException {
         //guardar en la base de datos el usuario;
+        try {
+            List<Owner> usuarios = getUsers();
+            FileWriter csvWriter = new FileWriter(ownerCSV);
+            csvWriter.append("correo").append(",").
+                    append("password").append(",").
+                    append("nombre").append(",").
+                    append("apellido").append("\n");
+            for (Owner o: usuarios) {
+                csvWriter.append(o.getCorreo()).append(",").
+                        append(o.getPassword()).append(",").
+                        append(o.getNombre()).append(",").
+                        append(o.getApellido()).append("\n");
+            }
+            csvWriter.append(usuario.getCorreo()).append(",").
+                    append(usuario.getPassword()).append(",").
+                    append(usuario.getNombre()).append(",").
+                    append(usuario.getApellido()).append("\n");
+            csvWriter.append("#FIN").append("\n");
+            csvWriter.close();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
         return usuario;
     }
     public static Payment savePayment(Payment pago) throws IOException {

@@ -1,6 +1,5 @@
 package com.haus.business;
 
-import com.haus.domain.Rent;
 import com.haus.domain.Service;
 import com.haus.interfaces.IMangeService;
 

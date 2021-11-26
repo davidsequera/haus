@@ -23,7 +23,7 @@ public class LogInController{
     private TextField TextUsuario;
 
     @FXML
-    private Button singInButton;
+    private Button signInButton;
 
     @FXML
     private Button toRegister;
@@ -40,7 +40,7 @@ public class LogInController{
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.show();
-        Stage myStage = (Stage) this.singInButton.getScene().getWindow();
+        Stage myStage = (Stage) this.toRegister.getScene().getWindow();
         myStage.close();
     }
     @FXML
@@ -51,7 +51,7 @@ public class LogInController{
         }
     }
     @FXML
-    private void goIn(Owner o) throws IOException {
+    protected void goIn(Owner o) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("list.fxml"));
         Parent root = loader.load();
         ListController listController = loader.getController();
@@ -60,7 +60,7 @@ public class LogInController{
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.show();
-        Stage myStage = (Stage) this.singInButton.getScene().getWindow();
+        Stage myStage = (Stage) this.signInButton.getScene().getWindow();
         myStage.close();
     }
 

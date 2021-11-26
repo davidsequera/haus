@@ -1,6 +1,7 @@
 package com.haus.screens;
 
 import com.haus.business.Auth;
+import com.haus.domain.Owner;
 import com.haus.interfaces.IAuth;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,7 +14,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class SignUpController {
+public class SignUpController{
 
     @FXML
     private TextField TextApellido;
@@ -48,14 +49,21 @@ public class SignUpController {
         Stage myStage = (Stage) this.singUpButton.getScene().getWindow();
         myStage.close();
     }
-    void LogIn(ActionEvent event) throws IOException {
-        if(auth.signUp(TextEmail.getText(),TextPassword.getText(),TextNombre.getText(),TextApellido.getText()) != null) {
-            System.out.println("Success");
-        }
-    }
     @FXML
-    void singUpButton(ActionEvent event) {
-
+    void signIn(ActionEvent event) throws IOException {
+        Owner user = auth.signUp(TextEmail.getText(),TextPassword.getText(),TextNombre.getText(),TextApellido.getText());
+        if(user != null) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("list.fxml"));
+            Parent root = loader.load();
+            ListController listController = loader.getController();
+            listController.setUser(user);
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
+            Stage myStage = (Stage) this.singUpButton.getScene().getWindow();
+            myStage.close();
+        }
     }
 
 }

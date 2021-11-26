@@ -4,7 +4,6 @@ module com.haus.screens {
     requires Domain;
     requires Business;
 
-
     opens com.haus.screens to javafx.fxml;
     exports com.haus.screens;
 }

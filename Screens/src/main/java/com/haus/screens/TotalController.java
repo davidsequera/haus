@@ -40,6 +40,9 @@ public class TotalController extends pageController{
         this.accountName.setText(super.getUserName()+" "+super.getUserApellido());
         this.accountUser.setText(super.getUserEmail());
     }
+    @Override
+    public void goAccount(ActionEvent event) throws IOException {
+    }
     @FXML
     public void LogOut(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("logIn.fxml"));

@@ -1,6 +1,5 @@
 package com.haus.screens;
 
-import com.haus.business.Integrador;
 import com.haus.business.ListProperties;
 import com.haus.domain.Rent;
 import com.haus.interfaces.IListProperties;

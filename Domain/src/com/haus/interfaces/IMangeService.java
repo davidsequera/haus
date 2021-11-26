@@ -1,6 +1,5 @@
 package com.haus.interfaces;
 
-import com.haus.domain.Rent;
 import com.haus.domain.Service;
 
 import java.io.IOException;
