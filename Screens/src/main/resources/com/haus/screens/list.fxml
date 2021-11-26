@@ -42,7 +42,7 @@
                               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                            </columnResizePolicy>
                         </TableView>
-                <Button fx:id="btRentar" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#changeServices" text="Rentar">
+                <Button fx:id="btRentar" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#goServices" text="Rentar">
                            <font>
                               <Font name="System Bold" size="23.0" />
                            </font>

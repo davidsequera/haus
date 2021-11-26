@@ -20,6 +20,7 @@ public class Start extends Application {
             Scene scene = new Scene(ventana);
             // Seteo la scene y la muestro
             primaryStage.setScene(scene);
+            primaryStage.setTitle("Haus");
             primaryStage.show();
         } catch (IOException e) {
             System.out.println(e.getMessage());

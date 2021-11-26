@@ -26,33 +26,35 @@
             </FlowPane>
             <FlowPane alignment="CENTER" hgap="15.0" layoutX="8.0" layoutY="268.0" prefHeight="333.0" prefWidth="782.0" vgap="15.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="-8.0" AnchorPane.topAnchor="268.0">
                <children>
-                  <TextField prefHeight="25.0" prefWidth="566.0" promptText="Correo Electronico">
+                  <TextField fx:id="PayCorreo" prefHeight="25.0" prefWidth="566.0" promptText="Correo Electronico">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </TextField>
-                  <TextField prefHeight="25.0" prefWidth="566.0" promptText="Nombre Del Titular De la Tarjeta">
+                  <TextField fx:id="PayTitular" prefHeight="25.0" prefWidth="566.0" promptText="Nombre Del Titular De la Tarjeta">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </TextField>
-                  <TextField prefHeight="31.0" prefWidth="566.0" promptText="Número de tarjeta de crédito">
+                  <TextField fx:id="PayNumer" prefHeight="31.0" prefWidth="566.0" promptText="Número de tarjeta de crédito">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </TextField>
-                  <ComboBox prefHeight="31.0" prefWidth="566.0" promptText="Tipo De Tarjeta" />
-                  <DatePicker prefHeight="25.0" prefWidth="566.0" promptText="Mes de la fecha de vencimiento de la tarjeta" />
-                  <DatePicker prefHeight="25.0" prefWidth="566.0" promptText="Año de la fecha de vencimiento de la tarjeta" />
+                  <ComboBox fx:id="PayTipo" prefHeight="31.0" prefWidth="566.0" promptText="Tipo De Tarjeta" />
+                  <DatePicker fx:id="PayVenciminteo" prefHeight="25.0" prefWidth="566.0" promptText="Mes de la fecha de vencimiento de la tarjeta" />
                </children>
             </FlowPane>
             <AnchorPane layoutX="62.0" layoutY="78.0" prefHeight="138.0" prefWidth="674.0" styleClass="basicBox" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="45.200000000000045">
                <children>
-                  <Label fx:id="PropertyName" layoutX="91.0" layoutY="15.0" prefHeight="48.0" prefWidth="183.0" styleClass="basicBox-title" text="Nombre" />
-                  <Label fx:id="PropertyLocation" layoutX="91.0" layoutY="75.0" prefHeight="36.0" prefWidth="161.0" text="Lugar" />
-                  <Label fx:id="PropertyPrice" layoutX="450.0" layoutY="39.0" text="Precio" />
-                  <Button layoutX="576.0" layoutY="80.0" mnemonicParsing="false" text="Pagar" />
-                  <Button layoutX="430.0" layoutY="80.0" mnemonicParsing="false" text="Servicios" />
+                  <Label layoutX="54.0" layoutY="24.0" styleClass="basicBox-title" text="Nombrecito">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font></Label>
+                  <Label layoutX="103.0" layoutY="86.0" text="Locacion" />
+                  <Label layoutX="430.0" layoutY="39.0" text="Precio Total" />
+                  <Button fx:id="PagarButton" layoutX="545.0" layoutY="80.0" mnemonicParsing="false" onAction="#buy" text="Pagar" />
+                  <Button layoutX="371.0" layoutY="80.0" mnemonicParsing="false" text="Servicios" />
                </children>
             </AnchorPane>
             <Label layoutX="14.0" layoutY="232.0" styleClass="title" text="Metodo de pago" />

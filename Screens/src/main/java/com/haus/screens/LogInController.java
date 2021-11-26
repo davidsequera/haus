@@ -45,15 +45,17 @@ public class LogInController{
     }
     @FXML
     void LogIn(ActionEvent event) throws IOException {
-        if(auth.logIn(TextUsuario.getText(),TextPassword.getText())) {
-            this.goIn();
+        Owner u = auth.logIn(TextUsuario.getText(),TextPassword.getText());
+        if(u != null ) {
+            this.goIn(u);
         }
     }
     @FXML
-    private void goIn() throws IOException {
+    private void goIn(Owner o) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("list.fxml"));
         Parent root = loader.load();
         ListController listController = loader.getController();
+        listController.setUser(o);
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.setScene(scene);

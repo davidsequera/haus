@@ -8,16 +8,26 @@ import java.util.List;
 import java.util.Objects;
 
 public class Auth implements IAuth {
-    public boolean logIn(String user,String password) throws IOException {
+    public Owner logIn(String user,String password) throws IOException {
         List<Owner> users = Integrador.getUsers();
         for (Owner o: users) {
             if(Objects.equals(user, o.getCorreo())){
-                return Objects.equals(user, o.getCorreo()) && Objects.equals(password, o.getPassword());
+                if(Objects.equals(password, o.getPassword())){
+                    return o;
+                }
             }
         }
-        return false;
+        return null;
     }
-    public boolean signUp(String name,String user,String password){
-        return !Objects.equals(user, "isa");
+    public Owner signUp(String correo,String password,String nombre,String apellido) throws IOException {
+        List<Owner> users = Integrador.getUsers();
+        for (Owner o: users) {
+            if(Objects.equals(correo, o.getCorreo())){
+                return null;
+            }
+        }
+        Owner o = new Owner(correo,password,nombre,apellido);
+        Integrador.saveUser(o);
+        return o;
     }
 }

@@ -24,12 +24,12 @@ public class Owner {
         this.nombre = nombre;
     }
 
-    public String setApellido() {
+    public String getApellido() {
         return apellido;
     }
 
     public void setApellido(String apellido) {
-        this.apellido = this.apellido;
+        this.apellido = apellido;
     }
 
     public String getCorreo() {
@@ -45,6 +45,6 @@ public class Owner {
     }
 
     public void setPassword(String password) {
-        this.password = this.password;
+        this.password = password;
     }
 }

@@ -85,9 +85,11 @@ public class Integrador {
     }
     public static Owner saveUser(Owner usuario) throws IOException {
         //guardar en la base de datos el usuario;
+        return usuario;
     }
     public static Payment savePayment(Payment pago) throws IOException {
         //guardar en la base de datos el pago;
+        return  pago;
     }
 
 }

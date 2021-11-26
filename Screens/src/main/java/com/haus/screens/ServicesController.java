@@ -42,6 +42,7 @@ public class ServicesController extends pageController{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("rent.fxml"));
         Parent root = loader.load();
         RentController rentController = loader.getController();
+        rentController.setUser(this.getUser());
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.setScene(scene);

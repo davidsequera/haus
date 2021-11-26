@@ -65,12 +65,13 @@ public class ListController extends pageController implements Initializable {
 
 
     @FXML
-    void changeServices(ActionEvent event) throws IOException {
+    void goServices(ActionEvent event) throws IOException {
         Rent property =PropertyList.getSelectionModel().getSelectedItem();
         if(property != null){
             FXMLLoader loader = new FXMLLoader(getClass().getResource("services.fxml"));
             Parent root = loader.load();
             ServicesController servicesController = loader.getController();
+            servicesController.setUser(this.getUser());
             Scene scene = new Scene(root);
             Stage stage = new Stage();
             stage.setScene(scene);

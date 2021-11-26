@@ -1,5 +1,7 @@
 package com.haus.screens;
 
+import com.haus.business.Auth;
+import com.haus.interfaces.IAuth;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -31,6 +33,9 @@ public class SignUpController {
     @FXML
     private Button toRegister;
 
+    IAuth auth = new Auth();
+
+
     @FXML
     void goLogIn(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("logIn.fxml"));
@@ -43,7 +48,11 @@ public class SignUpController {
         Stage myStage = (Stage) this.singUpButton.getScene().getWindow();
         myStage.close();
     }
-
+    void LogIn(ActionEvent event) throws IOException {
+        if(auth.signUp(TextEmail.getText(),TextPassword.getText(),TextNombre.getText(),TextApellido.getText()) != null) {
+            System.out.println("Success");
+        }
+    }
     @FXML
     void singUpButton(ActionEvent event) {
 
