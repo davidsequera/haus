@@ -1,5 +1,7 @@
 package com.haus.screens;
 
+import com.haus.business.Integrador;
+import com.haus.domain.Owner;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -20,6 +22,7 @@ public class Start extends Application {
             Scene scene = new Scene(ventana);
             // Seteo la scene y la muestro
             primaryStage.setScene(scene);
+            Integrador.saveUser(new Owner("sebasorjuela@gmail.com","pollitolindo","isabella","blanco"));
             primaryStage.show();
         } catch (IOException e) {
             System.out.println(e.getMessage());

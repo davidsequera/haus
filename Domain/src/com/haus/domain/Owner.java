@@ -24,7 +24,7 @@ public class Owner {
         this.nombre = nombre;
     }
 
-    public String setApellido() {
+    public String getApellido() {
         return apellido;
     }
 

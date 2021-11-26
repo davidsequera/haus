@@ -5,15 +5,12 @@ import com.haus.domain.Payment;
 import com.haus.domain.Rent;
 import com.haus.domain.Service;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Integrador {
-    public  static String base = "D:\\source\\haus\\Business\\";
+    public  static String base = "E:\\codes\\haus\\Business\\";
     public  static String rentCSV = base+"db\\rent.csv";
     public  static String ownerCSV = base+"db\\owner.csv";
     public  static String requestCSV = base+"db\\request.csv";
@@ -83,11 +80,22 @@ public class Integrador {
         }
         return null;
     }
-    public static Owner saveUser(Owner usuario) throws IOException {
+    public static void saveUser(Owner usuario) {
         //guardar en la base de datos el usuario;
+        try {
+            FileWriter csvWriter = new FileWriter(ownerCSV);
+            csvWriter.append(usuario.getCorreo()).append(",").append(usuario.getPassword()).
+                    append(",").append(usuario.getNombre()).append(",").
+                    append(usuario.getApellido());
+            csvWriter.close();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+
     }
-    public static Payment savePayment(Payment pago) throws IOException {
+    public static void savePayment(Payment pago) throws IOException {
         //guardar en la base de datos el pago;
+        pago.getTitular();
     }
 
 }
