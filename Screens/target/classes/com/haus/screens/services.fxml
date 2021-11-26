@@ -27,8 +27,6 @@
             </FlowPane>
             <AnchorPane layoutX="62.0" layoutY="78.0" prefHeight="138.0" prefWidth="674.0" styleClass="basicBox" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="45.200000000000045">
                <children>
-                  <Label fx:id="TextName" alignment="CENTER" layoutX="28.0" layoutY="28.0" prefHeight="45.0" prefWidth="161.0" styleClass="basicBox-title" />
-                  <Label fx:id="TextLocation" alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="76.0" prefHeight="45.0" prefWidth="161.0" />
                   <Button fx:id="btnPagar" layoutX="460.0" layoutY="81.0" mnemonicParsing="false" onAction="#goRent" text="Ir a pagar" />
                   <Label fx:id="PropertyPrice" layoutX="488.0" layoutY="39.0" text="Precio" />
                   <Label fx:id="PropertyName" layoutX="77.0" layoutY="24.0" styleClass="basicBox-title" text="Nombre">
@@ -48,9 +46,10 @@
                   <TableColumn prefWidth="161.60006713867188" text="Cantidad" />
               </columns>
             </TableView>
-            <Button fx:id="addService" layoutX="373.0" layoutY="300.0" mnemonicParsing="false" text="Añadir" />
-            <Button fx:id="deleteService" layoutX="528.0" layoutY="300.0" mnemonicParsing="false" text="Eliminar" />
+            <Button fx:id="addService" layoutX="391.0" layoutY="299.0" mnemonicParsing="false" text="Añadir" />
+            <Button fx:id="deleteService" layoutX="544.0" layoutY="300.0" mnemonicParsing="false" text="Eliminar" />
             <TextField layoutX="261.0" layoutY="299.0" prefHeight="26.0" prefWidth="78.0" />
+            <Button fx:id="addService1" layoutX="461.0" layoutY="300.0" mnemonicParsing="false" text="Modificar" />
          </children>
       </AnchorPane>
    </children>

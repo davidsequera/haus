@@ -1,5 +1,6 @@
 package com.haus.screens;
 
+import com.haus.business.Integrador;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -22,6 +23,7 @@ public class Start extends Application {
             primaryStage.setScene(scene);
             primaryStage.setTitle("Haus");
             primaryStage.show();
+            Integrador.getServices();
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }

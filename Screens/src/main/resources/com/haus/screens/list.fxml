@@ -44,7 +44,7 @@
                         </TableView>
                 <Button fx:id="btRentar" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#goServices" text="Rentar">
                            <font>
-                              <Font name="System Bold" size="23.0" />
+                              <Font name="Arial Bold" size="23.0" />
                            </font>
                         </Button>
                      </children>

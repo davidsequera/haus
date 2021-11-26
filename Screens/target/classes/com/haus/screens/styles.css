@@ -14,6 +14,9 @@
 .logOutButton{
     -fx-background-color: #9530D9;
 }
+.logOutButton:hover{
+    -fx-background-color: #DFB3F2;
+}
 .register{
     -fx-font-size: 15;
     -fx-background-color: transparent;

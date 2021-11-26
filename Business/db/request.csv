@@ -1,5 +1,6 @@
-propiedad,cliente
-servicio,precio,cantidad
-propiedad,cliente
-servicio,precio,cantidad
+usuario,nombre,lugar,precio
+luis,Casa Roja,Madrid,600
+luis,La Casa Rosada,Duitama,400
+luis,Rustica,Medellin,500
+luis,La Casa Azul,Girardot,50
 #FIN
