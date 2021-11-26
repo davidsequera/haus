@@ -5,8 +5,6 @@
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
@@ -50,14 +48,9 @@
             </FlowPane>
             <AnchorPane layoutX="62.0" layoutY="78.0" prefHeight="138.0" prefWidth="674.0" styleClass="basicBox" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="45.200000000000045">
                <children>
-                  <ImageView fitHeight="124.0" fitWidth="118.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="https://images.unsplash.com/photo-1517541866997-ea18e32ea9e9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=580&amp;q=80" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="186.0" layoutY="39.0" styleClass="basicBox-title" text="Casa Roja" />
-                  <Label layoutX="186.0" layoutY="75.0" text="Madrid" />
-                  <Label layoutX="467.0" layoutY="39.0" text="Precio Total: 200" />
+                  <Label fx:id="PropertyName" layoutX="91.0" layoutY="15.0" prefHeight="48.0" prefWidth="183.0" styleClass="basicBox-title" text="Casa Roja" />
+                  <Label fx:id="PropertyLocation" layoutX="91.0" layoutY="75.0" prefHeight="36.0" prefWidth="161.0" text="Madrid" />
+                  <Label fx:id="PropertyPrice" layoutX="467.0" layoutY="39.0" text="Precio Total: 200" />
                   <Button layoutX="576.0" layoutY="80.0" mnemonicParsing="false" text="Pagar" />
                   <Button layoutX="430.0" layoutY="80.0" mnemonicParsing="false" text="Servicios" />
                </children>

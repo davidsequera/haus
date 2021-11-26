@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ServicesController extends  pageController{
+public class ServicesController extends pageController{
     @FXML
     private Button btnPagar;
     public void goRent(ActionEvent event) throws IOException {

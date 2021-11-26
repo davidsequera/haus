@@ -13,7 +13,7 @@ public class Start extends Application {
     public void start(Stage primaryStage) throws IOException {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Start.class.getResource("logIn.fxml"));
+            loader.setLocation(Start.class.getResource("list.fxml"));
             // Cargo la ventana
             Pane ventana = (Pane) loader.load();
             // Cargo el scene
