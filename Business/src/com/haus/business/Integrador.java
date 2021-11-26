@@ -1,6 +1,7 @@
 package com.haus.business;
 
 import com.haus.domain.Owner;
+import com.haus.domain.Payment;
 import com.haus.domain.Rent;
 import com.haus.domain.Service;
 
@@ -82,4 +83,11 @@ public class Integrador {
         }
         return null;
     }
+    public static Owner saveUser(Owner usuario) throws IOException {
+        //guardar en la base de datos el usuario;
+    }
+    public static Payment savePayment(Payment pago) throws IOException {
+        //guardar en la base de datos el pago;
+    }
+
 }
